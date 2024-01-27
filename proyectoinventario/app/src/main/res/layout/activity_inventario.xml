@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InventarioActivity">
+
+    <include
+        android:id="@+id/include21"
+        layout="@layout/fragment_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lvInventario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include21" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAlf"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:background="#0F67AC"
+        android:tint="#FEFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonCateg"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonCateg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonCateg"
+        app:srcCompat="@drawable/ic_aphabet" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCateg"
+        android:layout_width="75dp"
+        android:layout_height="45dp"
+        android:background="@drawable/filtrer"
+        android:tint="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="@+id/include21"
+        app:layout_constraintEnd_toEndOf="@+id/include21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_category" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPers"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:background="#0F67AC"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonCateg"
+        app:layout_constraintEnd_toEndOf="@+id/include21"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonCateg"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonCateg"
+        app:srcCompat="@drawable/ic_personal" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="0.4"
+            android:background="@drawable/divisor"
+            android:tint="#FFFFFF"
+            app:srcCompat="@drawable/ic_view" />
+
+        <Button
+            android:id="@+id/buttonSiguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="2"
+            android:background="@drawable/divisor"
+            android:text="Siguiente"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAddProd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="0.4"
+            android:background="@drawable/divisor"
+            app:srcCompat="@drawable/ic_add" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Clesapp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titulo">Eliminar Inventario</string>
+    <string name="mensaje">¿Seguro que quiere eliminar este inventario?</string>
+    <string name="boton_positivo">Sí</string>
+    <string name="boton_negativo">No</string>
+    <string name="respuesta_ok">Inventario eliminado</string>
+    <string name="respuesta_negativa">Eliminación cancelada</string>
+</resources>

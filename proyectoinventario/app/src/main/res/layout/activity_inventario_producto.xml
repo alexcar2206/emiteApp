@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InventarioProductoActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonGuardarProductoInv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/divisor"
+            android:text="Guardar"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonSaveNextProd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/divisor"
+            android:text="Siguiente"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/include23"
+        layout="@layout/fragment_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNombreProducto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="NOMBRE DE PRODUCTO PRUEBA 001"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/include23"
+        app:layout_constraintEnd_toEndOf="@+id/include23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/include23" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include23"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView61"
+                app:layout_constraintTop_toBottomOf="@+id/textView61">
+
+                <LinearLayout
+                    android:id="@+id/layoutImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <ImageButton
+                android:id="@+id/buttonImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView61"
+                app:layout_constraintStart_toEndOf="@+id/textView61"
+                app:layout_constraintTop_toTopOf="@+id/textView61"
+                app:srcCompat="@drawable/ic_camera" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="Precio:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Promoción"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView59"
+                app:layout_constraintTop_toBottomOf="@+id/textView59" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonProm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="ToggleButton"
+                android:textOff="NO"
+                android:textOn="SÍ"
+                app:layout_constraintBottom_toBottomOf="@+id/textView56"
+                app:layout_constraintStart_toStartOf="@+id/toggleButtonExp"
+                app:layout_constraintTop_toTopOf="@+id/textView56" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Exposición"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView56"
+                app:layout_constraintTop_toBottomOf="@+id/textView56" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="ToggleButton"
+                android:textOff="NO"
+                android:textOn="SÍ"
+                app:layout_constraintBottom_toBottomOf="@+id/textView57"
+                app:layout_constraintStart_toEndOf="@+id/textView57"
+                app:layout_constraintTop_toTopOf="@+id/textView57" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Rotura"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView57"
+                app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+            <ToggleButton
+                android:id="@+id/toggleButtonRot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ToggleButton"
+                android:textOff="NO"
+                android:textOn="SÍ"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView58"
+                app:layout_constraintStart_toStartOf="@+id/toggleButtonExp"
+                app:layout_constraintTop_toTopOf="@+id/textView58" />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Facing:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView55"
+                app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
+            <EditText
+                android:id="@+id/editTextNumberFacing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ems="10"
+                android:hint="Número de facing"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="@+id/textView59"
+                app:layout_constraintStart_toEndOf="@+id/textView59"
+                app:layout_constraintTop_toTopOf="@+id/textView59" />
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Observaciones:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView58"
+                app:layout_constraintTop_toBottomOf="@+id/textView58" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Observaciones del producto"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+            <EditText
+                android:id="@+id/editTextNumberDecimalPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ems="10"
+                android:hint="Precio del producto"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="@+id/textView55"
+                app:layout_constraintStart_toEndOf="@+id/textView55"
+                app:layout_constraintTop_toTopOf="@+id/textView55" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Imagenes:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+            <Spinner
+                android:id="@+id/spinnerPromo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/toggleButtonProm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/toggleButtonProm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
